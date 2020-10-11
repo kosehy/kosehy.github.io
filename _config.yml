@@ -282,3 +282,4 @@ defaults:
 
 #languages
 languages: ["ko", "en", "jp"]
+exclude_from_localizations: ["javascript", "images", "css"]
