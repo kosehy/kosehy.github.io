@@ -1,4 +1,4 @@
-I"d
+I"c
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
@@ -28,7 +28,7 @@
           
           
             <li class="masthead_menu-item lang">
-              <a href="/">Kor </a>|<a href="/en/"> Eng </a>|<a href="/jp/" class="enabled"> Jap</a>
+              <a href="/">Kor </a>|<a href="/en/">Eng </a>|<a href="/jp/" class="enabled">Jap </a>
             </li>
           
         </ul>
