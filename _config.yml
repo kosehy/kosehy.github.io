@@ -93,10 +93,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "SEUNG HYUN KO"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  bio              : "I am an deep learning engineer."
+  location         : "Incheon"
   email            :
   links:
     - label: "Email"
@@ -129,7 +129,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/kosehy"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
