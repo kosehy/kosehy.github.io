@@ -1,4 +1,4 @@
-I"
+I"¯
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
@@ -25,18 +25,7 @@
         </button>
         <ul class="hidden-links hidden"></ul>
       </nav>
-      <nav id="lang-sel">
-        <ul class="lang">
-          
-          
-          
-          
-            <li class="masthead_menu-item lang">
-              <a href="/2020/10/2020-10-11-01/" >Kor </a>|<a href="/en/2020/10/2020-10-11-01/" >Eng </a>|<a href="/jp/2020/10/2020-10-11-01/" class="enabled">Jap </a>
-            </li>
-          
-        </ul>
-      </nav>
+      
     </div>
   </div>
 </div>

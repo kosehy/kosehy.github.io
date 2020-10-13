@@ -32,7 +32,7 @@
         </button>
         <ul class="hidden-links hidden"></ul>
       </nav>
-      <nav id="lang-sel">
+      {% comment %} <nav id="lang-sel">
         <ul class="lang">
           {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
           {% capture link2 %}{{ site.baseurl_root }}/en{{ page.url}}{% endcapture %}
@@ -51,7 +51,7 @@
             </li>
           {% endif %}
         </ul>
-      </nav>
+      </nav> {% endcomment %}
     </div>
   </div>
 </div>
