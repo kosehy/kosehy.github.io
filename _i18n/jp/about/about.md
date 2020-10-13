@@ -1,6 +1,6 @@
 kubernetesに興味深いdeep learning engineer.
 
-### 관심 분야 
+### 興味分野
 - kubernetes
 - docker
 - git
