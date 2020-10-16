@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="kosehy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="kosehy.github.io/" rel="alternate" type="text/html" hreflang="ko" /><updated>2020-10-16T16:45:24+09:00</updated><id>kosehy.github.io/feed.xml</id><title type="html">kosehy’s github pages</title><subtitle>Want to be a developer in real world</subtitle><author><name>SEUNG HYUN KO</name></author><entry><title type="html">테스트00!</title><link href="kosehy.github.io/2020/10/2020-10-13-01/" rel="alternate" type="text/html" title="테스트00!" /><published>2020-10-13T00:00:00+09:00</published><updated>2020-10-13T00:00:00+09:00</updated><id>kosehy.github.io/2020/10/01</id><content type="html" xml:base="kosehy.github.io/2020/10/2020-10-13-01/">&lt;p&gt;테스트00&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="kosehy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="kosehy.github.io/" rel="alternate" type="text/html" hreflang="ko" /><updated>2020-10-16T16:53:32+09:00</updated><id>kosehy.github.io/feed.xml</id><title type="html">kosehy’s github pages</title><subtitle>Want to be a developer in real world</subtitle><author><name>SEUNG HYUN KO</name></author><entry><title type="html">우분투에서 sudo user 생성 방법</title><link href="kosehy.github.io/2020/10/2020-10-16/" rel="alternate" type="text/html" title="우분투에서 sudo user 생성 방법" /><published>2020-10-16T00:00:00+09:00</published><updated>2020-10-16T00:00:00+09:00</updated><id>kosehy.github.io/2020/10/01</id><content type="html" xml:base="kosehy.github.io/2020/10/2020-10-16/">&lt;p&gt;우분투 18.04에서 sudo user 생성 방법&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ssh를 사용하여 서버에 root user로 로그인&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh root@server_ip_address
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;adduser 명령어를 사용하여 시스템에 새로운 user를 추가&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;username부분을 원하는 유저 이름으로 변경 할 것&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;adduser username
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;암호 설정하기&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;단순한 암호보다는 복잡한 암호로 설정 할 것&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Set password prompts:
+Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;user 정보 입력하기&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;User information prompts:
+Changing the user information &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;username
+Enter the new value, or press ENTER &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;the default
+    Full Name &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;:
+    Room Number &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;:
+    Work Phone &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;:
+    Home Phone &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;:
+    Other &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;:
+Is the information correct? &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Y/n]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;생성한 user를 sudo group에 포함하기&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;usermod &lt;span class=&quot;nt&quot;&gt;-aG&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;username
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;생성한 user 계정으로 변경하여 테스트 하기&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;su - username
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;command_to_run
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;예제: root 폴더안의 내용 확인하기&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-la&lt;/span&gt; /root
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;출처&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/ntamvl/47ae0ac0a369dabdef83b5c63139c076&quot;&gt;https://gist.github.com/ntamvl/47ae0ac0a369dabdef83b5c63139c076&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2020-10-16 15:49:00 +0900&lt;/p&gt;</content><author><name>SEUNG HYUN KO</name></author><category term="Ubuntu," /><category term="ssh" /><summary type="html">우분투 18.04에서 sudo user 생성 방법</summary></entry><entry><title type="html">테스트00!</title><link href="kosehy.github.io/2020/10/2020-10-13-01/" rel="alternate" type="text/html" title="테스트00!" /><published>2020-10-13T00:00:00+09:00</published><updated>2020-10-13T00:00:00+09:00</updated><id>kosehy.github.io/2020/10/01</id><content type="html" xml:base="kosehy.github.io/2020/10/2020-10-13-01/">&lt;p&gt;테스트00&lt;/p&gt;
 
 &lt;p&gt;2020-10-13 01:27:00 +0900&lt;/p&gt;</content><author><name>SEUNG HYUN KO</name></author><category term="Jekyll" /><summary type="html">테스트00</summary></entry><entry><title type="html">헬로!</title><link href="kosehy.github.io/2020/10/2020-10-11-01/" rel="alternate" type="text/html" title="헬로!" /><published>2020-10-11T00:00:00+09:00</published><updated>2020-10-11T00:00:00+09:00</updated><id>kosehy.github.io/2020/10/01</id><content type="html" xml:base="kosehy.github.io/2020/10/2020-10-11-01/">&lt;p&gt;안녕&lt;/p&gt;
 
