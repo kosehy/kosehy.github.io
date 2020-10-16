@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "SEUNG HYUN KO"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an deep learning engineer."
+  bio              : "I am a deep learning engineer."
   location         : "Incheon"
   email            :
   links:
